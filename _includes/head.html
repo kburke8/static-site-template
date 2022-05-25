@@ -1,0 +1,165 @@
+<head>
+  {% if site.google.analytics and jekyll.environment == "production" %}
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google.analytics }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '{{ site.google.ads }}');
+	  gtag('config', '{{ site.google.analytics }}');
+  </script>
+  <!-- End Google Analytics -->
+{% endif %}
+
+{% if site.google.tagmanager and jekyll.environment == "production" %}
+    <!-- Google Tag Manager -->
+    <script>
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','{{ site.google.tagmanager }}');
+    </script>
+    <!-- End Google Tag Manager -->
+  {% endif %}
+
+
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  {% if page.description %}
+  <meta name="description" content="{{ page.description }}">
+  {% endif %}
+
+  {% if page.noindex == true %}
+  <meta name="robots" content="noindex">
+  {% endif %}
+
+  {% if page.keywords %}
+  <meta name="keywords" content="{{page.keywords}}">
+  {% endif %}
+
+  <meta name="author" content="{{ site.author }}">
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+
+  <title>{% if page.title %}{{ page.title | append: " | " | append: site.title }}{% else %}{{ site.title }}{% endif %}</title>
+
+  <meta property="og:title" content="{% if page.title %}{{ page.title | append: " | " | append: site.title }}{% else %}{{ site.title }}{% endif %}">
+  {% if page.description %}
+  <meta property="og:description" content="{{page.description}}">
+  {% endif %}
+  
+  <meta property="og:image" content="{% if page.image %}{{page.image}}{% else %}{% endif %}">
+
+  <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <meta property="og:type" content="{% if page.layout == "post" %}article{% else %}website{% endif %}">
+  {% if page.layout == "post" %}
+  <meta property="og:article:published_time" content="{{page.date}}">
+  <meta property="og:article:author" content="{{page.author}}">
+  <meta property="og:article:section" content="{{page.category}}">
+  <meta property="og:article:tag" content="{{page.tags}}">
+  {% if page.image_source %}
+    <link rel="preload" href="{{site.baseurl}}{{page.image_source}}" as="image" type="image/webp">
+  {% endif %}
+  {% endif %}
+
+  <meta name="twitter:card" content="summary_large_image">
+
+  <style type="text/css">
+    {% include bootstrap.min.css %}
+  </style>
+  <!-- Bootstrap core CSS -->
+  <!-- <link href="{{site.baseurl}}/assets/css/bootstrap.min.css" rel="stylesheet"> -->
+
+  <!-- Custom fonts for this template -->
+  <link rel="preload" href="{{site.baseurl}}/assets/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="{{site.baseurl}}/assets/css/all.min.css"></noscript>
+  <!-- <link rel="preload" href="https://db.onlinewebfonts.com/c/685863138475bd81c7e5068082244fc5?family=GT+Super+Display+Light&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://db.onlinewebfonts.com/c/685863138475bd81c7e5068082244fc5?family=GT+Super+Display+Light&display=swap"></noscript>  -->
+
+  <!-- <link rel="preconnect" href="https://fonts.gstatic.com/"> -->
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400&display=swap" rel="stylesheet">  -->
+  <!-- <link rel="preload" href="https://fonts.googleapis.com/css2?family=Raleway:wght@100,300,400&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@100,300,400&display=swap"></noscript> -->
+   <!-- <link rel="preload" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic&display=swap"></noscript>
+  <link rel="preload" href="https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap"></noscript>
+  <link rel="preload" href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700&display=swap"></noscript>
+   -->
+
+{% if page.layout == "home" %}
+<link rel="preload" href="{{site.baseurl}}/assets/img/site-header-bg-1.webp" as="image" type="image/webp">
+<link rel="preload" href="{{site.baseurl}}/assets/css/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{{site.baseurl}}/assets/css/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{{site.baseurl}}/assets/css/webfonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+{% endif %}
+
+<link rel="preload" href="{{site.baseurl}}/assets/css/685863138475bd81c7e5068082244fc5.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{{site.baseurl}}/assets/css/raleway/Raleway-Light.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="preload" href="{{site.baseurl}}/assets/css/raleway/Raleway-Regular.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="preload" href="{{site.baseurl}}/assets/css/raleway/Raleway-Thin.ttf" as="font" type="font/ttf" crossorigin>
+  <!-- Custom styles for this theme -->
+  <!--<link href="assets/css/agency.min.css" rel="stylesheet">-->
+  <link href="{{site.baseurl}}/assets/css/agency.css" rel="stylesheet">
+  
+  <!-- Page container change top padding when nav shrinks -->
+  {% if page.layout == "page" or page.layout == "post" or page.layout == "service" or page.layout == "book" %}
+  <style>
+    #pagecontainer {padding-top: 150px;}
+	@media only screen and (max-width: 991px) {
+	  #pagecontainer {padding-top: 100px;}
+	}
+  </style>
+  {% endif %}
+<!-- <script type="application/ld+json">
+  {
+    "@context" : "http://schema.org",
+    "@type" : "LocalBusiness",
+    "name" : "Dr. Person",
+    "image" : "{% if page.image %}{{page.image}}{% else %}https://example.com/assets/img/team/.webp{% endif %}",
+    "telephone" : "{{site.phone}}",
+    "priceRange" : "$",
+    "address" : {
+      "@type" : "PostalAddress",
+      "streetAddress" : "",
+      "addressLocality" : "",
+      "addressRegion" : "",
+      "postalCode" : ""
+    },
+    "url" : "https://example.com/",
+    "aggregateRating" : {
+      "@type" : "AggregateRating",
+      "ratingValue" : "5.0",
+      "bestRating" : "5.0",
+      "worstRating" : "5.0",
+      "ratingCount" : "2"
+    }
+   
+  }
+}
+  </script> -->
+{% if page.layout == "home" %}
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+    {%- for faq in site.data.sitetext.faq -%}
+    {
+      "@type": "Question",
+      "name": "{{faq.question}}",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "{{faq.answer}}"
+      }
+    }{% if forloop.last != true %},{% endif %}
+    {% endfor %}
+    ]
+  }
+  </script>
+  {% endif %}
+  <meta name="facebook-domain-verification" content="ymw5xryzvozuafgb4po48ptai4hom3" />
+</head>

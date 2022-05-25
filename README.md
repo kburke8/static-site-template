@@ -1,0 +1,1 @@
+This repository contains a template for quickly starting a static site with SEO fairly optimized.

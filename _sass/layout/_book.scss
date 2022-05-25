@@ -1,0 +1,30 @@
+.book{
+  color: $gray-700;
+  h1 {
+    text-align: center;
+    color: black;
+  }
+  h3 {
+    text-align: center;
+    color: black;
+  }
+  .bg-notice {
+    border: 1px;
+    // border-radius: 10px;
+    border-style: solid;
+    border-color: $gray-800;
+    // box-shadow: 5px 5px $gray-500;
+    margin-top:50px;
+    margin-bottom: 50px;
+  }
+  .notice {
+    padding: 15px;
+  }
+  hr  {
+    border: 0;
+    height: 1px;
+    background-color: black;
+    margin-bottom: 25px;
+    margin-top: 25px;
+  }
+}

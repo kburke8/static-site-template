@@ -1,0 +1,104 @@
+// Styling for the services section
+.services{ 
+  padding-bottom: 0px !important;
+  .service-heading {
+      margin: 15px 0;
+      text-transform: none;
+      color: $gray-700;
+      font-weight: 100;
+      font-size: 2em;
+    @include gt-font;
+
+  }
+
+  .hidden-mobile{
+    font-size: 1.1em;
+    font-weight: 300;
+    text-align: left;
+    @include raleway-font;
+    p{
+      line-height: 1.5 !important;
+    }
+  }
+  
+  .section-subheading {
+    margin-bottom: 25px !important;
+    @include gt-font;
+  }
+
+  .section-heading {
+    color: $black;
+    font-weight: 100 !important;
+    font-size: 3.25em !important;
+    @include raleway-font;
+  }
+
+  hr  {
+    border: 0;
+    height: 1px;
+    background-color:black;
+    // background: $gray-300;
+    // background-image: linear-gradient(to right, $gray-700, $black, $gray-700);
+    // background-image: linear-gradient(to right, $gray-300, $gray-600, $gray-300);
+    margin-bottom: 50px;
+    margin-top: 0px;
+  }
+
+  #hr2 {
+    margin-top: 35px;
+  }
+  .service-link {
+    h4{
+      color: black;
+    }
+    h4:hover {
+      color: darken($primary, 10%) !important;
+    }
+
+      i{
+        -webkit-transition: all 0.5s ease;
+          -moz-transition: all 0.5s ease;
+            -o-transition: all 0.5s ease;
+            -ms-transition: all 0.5s ease;
+                transition: all 0.5s ease;
+      }
+      
+      i:hover {
+        color: darken($white, 5%);
+        -webkit-transform: rotate(-20deg);
+          -moz-transform: rotate(-20deg);
+            -o-transform: rotate(-20deg);
+            -ms-transform: rotate(-20deg);
+                transform: rotate(-20deg);
+      }
+  }
+
+  .service {
+    padding-bottom: 50px;
+    h1 {
+      padding-bottom: 25px;
+      letter-spacing: 1px;
+      text-decoration: underline;
+    }
+    h2 {
+      padding-bottom: 15px;
+    }
+    h5 {
+      padding-bottom: 5px;
+    }
+    ul > {
+    li > {
+      margin: 5px;
+      ul {
+        margin-bottom: 12px;
+      }
+      }
+    }
+  }
+
+  @media(max-width:992px) {
+    .hidden-mobile{
+      display: none;
+    }
+  }
+}

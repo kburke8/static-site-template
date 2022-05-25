@@ -1,0 +1,68 @@
+header:
+    title: Title
+    text: extra text 1
+    text2:  extra text 2
+    text3:  extra text 3
+    button: Button Text
+    buttonlink: "https://google.com/" # "#{section}" or "URL/page link"
+
+services:
+    title: "Highlighted Services"
+    text: ""
+    section: services
+    list:
+      - title: "Service 1"
+        link: "service-1"
+        desc: "description for service 1"
+        icon: fas fa-plus-square #find more at https://fontawesome.com/icons
+      - title: "Service 2"
+        link: "service-2"
+        desc: "description for service 2"
+        icon: fas fa-balance-scale-right       
+      
+
+team:
+    title: "Meet Mr. Person"
+    subtext: "Mr. Person knows x and y"
+    section: about
+    people:
+      - name: "Meet Mr. Person"
+        role: "People Person"
+        image: assets/img/team/missing.webp
+        alt: People Person
+        social:
+          - url: https://www.facebook.com/
+            icon: "fab fa-facebook-f"
+          - url: https://www.youtube.com/
+            icon: "fab fa-youtube"
+          - url: https://www.instagram.com/
+            icon: "fab fa-instagram"
+faq:
+  - question: What is 2 + 2?
+    answer: |
+      <p>
+      4
+      </p>
+    open: true
+  - question: Do you eat pie?
+    answer: |
+      <p>yes</p>
+
+contact:
+    title: "Request Info"
+    text: |
+     <p>Please reach out with any questions, comments or feedback.</p>
+    section: contact
+    
+footer:
+    legal: "Privacy Policy"
+    social:
+      - url: https://www.facebook.com/
+        icon: "fab fa-facebook-f"
+      - url: https://www.youtube.com/
+        icon: "fab fa-youtube"
+      - url: https://www.instagram.com/
+        icon: "fab fa-instagram"
+
+
+# {{ site.data.sitetext.ex.ex | markdownify | default: example }}

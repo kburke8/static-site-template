@@ -1,0 +1,13 @@
+nav:
+  - title: "Nav1"
+    section: nav1
+
+  - title: "Nav2"
+    section: nav2
+
+  - title: "Blog"
+    url: /posts
+    
+  - title: "External Link"
+    redirect: https://www.google.com
+

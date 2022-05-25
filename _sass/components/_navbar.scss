@@ -1,0 +1,170 @@
+// Styling for the navbar
+#mainNav {
+  background-color: white;
+  border:0px;
+  border-bottom: 2px;
+  border-style: solid;
+  .navbar-toggler {
+    font-size: 12px;
+    right: 0;
+    padding: 13px;
+    color: black;
+    border: 1px;
+    border-style: solid;
+    border-color: black;
+    background-color: white;
+    @include gt-font;
+  }
+  .navbar-brand {
+    margin-right: 3%;
+    color: black;
+    text-transform: uppercase;
+    @include raleway-font;
+    font-size: 1.25em;
+    font-weight: 200;
+    margin-left: 0px;
+    &.active,
+    &:active,
+    &:focus,
+    &:hover {
+      color: darken($primary, 10%);
+    }
+  }
+  a {
+    margin-left: auto;
+    color: black;
+    &:hover {
+      color: darken($primary, 10%);
+    }
+    @include gt-font;
+  }
+  .navbar-nav {
+    .nav-item {
+      .nav-link {
+        font-size: 1em;
+        font-weight: 400;
+        padding: 0.75em 0;
+        letter-spacing: 1px;
+        text-transform: none;
+        color: black;
+        @include gt-font;
+        &.active,
+        &:hover {
+          color: $primary;
+        }
+      }
+    }
+  }
+}
+@media(min-width:992px) {
+  #mainNav {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
+    -moz-transition: padding-top 0.3s, padding-bottom 0.3s;
+    transition: padding-top 0.3s, padding-bottom 0.3s;
+    border: none;
+    background-color: transparent;
+    .navbar-brand {
+      font-size: 1.5em;
+      font-weight: 300;
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      transition: all 0.3s;
+      color: white;
+      padding-bottom: 3%;
+    }
+    &.navbar-other-page {
+      background-color: white;
+      border: 0px;
+      border-bottom: 2px;
+      border-color: black;
+      border-style: solid;
+      .navbar-brand {
+        color: black;
+        @include raleway-font;
+        font-size: 1.5em;
+        text-transform: uppercase;
+      }
+      .navbar-nav {
+        > li:first-child{
+          border-left: 1px solid $gray-900;
+        padding-left: 2%;
+        box-sizing: border-box;
+        }
+        > li:last-child{
+          border-right: 1px solid $gray-900;
+        padding-right: 2%;
+        box-sizing: border-box;
+        }
+
+      }
+      .nav-item {
+        .nav-link {
+          color: black !important;
+        text-transform: none;
+          font-size: 1em;
+        }
+      }
+      a {
+        color: black;
+        &:hover {
+          color: darken($primary, 10%);
+        }
+      }
+    }
+    a {
+    margin-left: 3%;
+      color: white;
+      white-space: nowrap;
+    }
+    .navbar-nav {
+      .nav-item {
+        .nav-link {
+          color: white;
+          white-space: nowrap;
+        }
+        margin: 1em 1em !important;
+      }
+    }
+    &.navbar-shrink {
+      padding-top: 0;
+      padding-bottom: 0;
+      background-color: white;
+      border: 0px;
+      border-bottom: 2px;
+      border-color: black;
+      border-style: solid;
+      .navbar-brand {
+        color: black;
+        @include raleway-font;
+        font-size: 1.25em;
+        padding: 12px 0;
+      }
+    .navbar-nav {
+      > li:first-child{
+        border-left: 1px solid $gray-900;
+        box-sizing: border-box;
+        padding-left: 2%;
+      }
+      > li:last-child{
+        border-right: 1px solid $gray-900;
+        box-sizing: border-box;
+        padding-right: 2%;
+      }
+
+    }
+      .nav-item {
+        .nav-link {
+          color: black;
+        }
+      }
+      a {
+        color: black;
+        &:hover {
+          color: darken($primary, 10%);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+// Styling for the services section
+.blog-post {
+  padding-bottom: 50px;
+  h1 {
+    text-align: center;
+    padding-bottom: 25px;
+    letter-spacing: 1px;
+  }
+  h2 {
+    padding-bottom: 15px;
+  }
+  h5 {
+    padding-bottom: 5px;
+  }
+  hr  {
+    border: 0;
+    height: 1px;
+    background-color:black;
+    // background: $gray-300;
+    // background-image: linear-gradient(to right, $gray-700, $black, $gray-700);
+    // background-image: linear-gradient(to right, $gray-300, $gray-600, $gray-300);
+    margin-bottom: 50px;
+    margin-top: 0px;
+  }
+  ul > {
+   li > {
+    margin: 5px;
+    ul {
+      margin-bottom: 12px;
+    }
+    }
+  }
+  a{
+      color: darken($color: $primary, $amount: 20%);
+  }
+  
+}

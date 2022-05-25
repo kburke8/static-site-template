@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  {% include head.html %}
+
+  <body id="page-top">
+
+
+	{% if site.google.tagmanager and jekyll.environment == "production" %}
+		<!-- Google Tag Manager (noscript) -->
+		<noscript>
+			<iframe src="https://www.googletagmanager.com/ns.html?id={{ site.google.tagmanager }}"
+			height="0" width="0" style="display:none;visibility:hidden"></iframe>
+		</noscript>
+	<!-- End Google Tag Manager (noscript) -->
+  	{% endif %}
+  	{{ content }}
+
+	  {% include footer.html %}
+
+	  <!-- Bootstrap core JavaScript -->
+	  <script src="{{site.baseurl}}/assets/js/jquery.min.js"></script>
+	  <script src="{{site.baseurl}}/assets/js/bootstrap.bundle.min.js"></script>
+
+	  <!-- Plugin JavaScript -->
+	  <script src="{{site.baseurl}}/assets/js/jquery.easing.min.js"></script>
+
+	  <!-- Contact form JavaScript -->
+	  <script async src="{{site.baseurl}}/assets/js/jqBootstrapValidation.min.js"></script>
+	  <script async src="{{site.baseurl}}/assets/js/contact_me.min.js"></script>
+
+	  <!-- Custom scripts for this template -->
+	  <script src="{{site.baseurl}}/assets/js/agency.min.js"></script>
+
+	  <!-- Script for lazy loading images -->
+	  <script src="{{site.baseurl}}/assets/js/lazysizes.min.js" async=""></script>
+
+  </body>
+</html>

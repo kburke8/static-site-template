@@ -1,0 +1,20 @@
+<div class="page-section faq" id="faq">
+  <div class="container">  
+    <div class="col-lg-12 text-center">
+      <h2 class="section-heading text-uppercase">Frequently Asked Questions</h2>
+    </div>
+    <hr>
+    {%- for faq in site.data.sitetext.faq -%}
+      {% if faq.open %}
+      <details open>
+        {% else %}
+      <details>
+        {% endif %}
+        <summary class="question">{{faq.question}}</summary>
+        <div class="faq__content">
+          <p>{{faq.answer}}</p>
+        </div>
+      </details>
+    {% endfor %}
+  </div>
+</div>

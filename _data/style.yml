@@ -1,0 +1,8 @@
+#Color Customization
+highlight: "#B8915A"
+#white: "#7A7A7A"
+#black: "#000"
+
+#Image Customization
+# header-image: "../img/header-bg.webp"
+contact-image: "../img/contact-bg.webp"

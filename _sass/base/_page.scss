@@ -1,0 +1,90 @@
+// Global styling for this template
+body {
+  overflow-x: hidden;
+  @include gt-font;
+}
+
+p {
+  line-height: 1.75;
+  width: inherit;
+  img {
+    width: inherit;
+  }
+}
+.bg-beige{
+  background-color: #f8f7f3 !important;
+}
+a {
+  color: $gray-700;
+  &:hover {
+    color: darken($primary, 25%);
+  }
+}
+
+.text-primary {
+  color: $primary !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 100;
+  @include raleway-font;
+}
+h1{
+  font-size: 3em;
+}
+h2{
+  font-size: 2.5em;
+}
+h3{
+  font-size: 2em;
+}
+
+.page-section {
+  padding: 75px 0;
+  h2.section-heading {
+    font-size: 40px;
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+  h3.section-subheading {
+    font-size: 1.2em;
+    font-weight: 300;
+    margin-bottom: 75px;
+    text-transform: none;
+    @include gt-font;
+  }
+}
+
+// Highlight color customization
+::-moz-selection {
+  background: $primary;
+  text-shadow: none;
+}
+
+::selection {
+  background: $primary;
+  text-shadow: none;
+}
+
+img::selection {
+  background: transparent;
+}
+
+img::-moz-selection {
+  background: transparent;
+}
+
+.reversefootnote{
+  font-size: 1.5em;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+.bg-dark {
+  background-color: $gray-700;
+}

@@ -1,0 +1,55 @@
+// Styling for the team section
+
+.about{
+  hr  {
+    border: 0;
+    height: 3px;
+    background-color:black;
+    margin-bottom: 50px;
+    margin-top: 0px;
+  }
+  .team-member {
+    margin-bottom: 0px;
+      text-align: left;
+      @include gt-font;
+      font-size: 1.1em;
+    img {
+      width: 349px;
+      height: 525px;
+      border: 7px solid fade-out($gray-800, 0.9);
+      border-radius: 0px;
+      margin-left: 15%;
+      margin-top: 10%;
+    }
+    h4 {
+      margin-top: 25px;
+      margin-bottom: 0;
+      text-transform: none;
+    }
+    h3 {
+      color: $black;
+      font-weight: 100;
+      font-size: 2em;
+      @include raleway-font;
+    }
+    p {
+      margin-top: 0;
+    }
+    .social-buttons {
+      text-align: center;
+    }
+    hr{
+      height: 1px;
+    }
+  }
+}
+@media(max-width:992px) {
+  .about{
+  .team-member {
+    img {
+      margin-left: 5%;
+      margin-bottom: 15px;
+    }
+  }
+  }
+}
